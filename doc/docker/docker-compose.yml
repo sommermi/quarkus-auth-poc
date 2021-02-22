@@ -1,0 +1,13 @@
+version: '3.3'
+services:
+
+  quarkus-auth-poc:
+    image: quarkus-microservice/quarkus-auth-poc:1.0.0-SNAPSHOT
+    ports:
+      - "8080:8080"
+    networks:
+      - ether
+
+networks:
+  ether:
+    driver: bridge
